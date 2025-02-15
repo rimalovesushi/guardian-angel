@@ -7,6 +7,9 @@ function App() {
       <div className="App">
         <Navbar />
       </div>
+      <div>
+        <h2 className="">Today's Menu</h2>
+      </div>
     </main>
   )
 }

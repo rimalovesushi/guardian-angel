@@ -2,24 +2,22 @@ import type React from "react"
 import { useState } from "react"
 
 interface MenuItem {
-  title: string
-  items: { title: string; href: string }[]
-}
+    title: string
+    items: { title: string; href: string }[]
+  }  
 
 const menuItems: MenuItem[] = [
   {
     title: "Registration",
     items: [
       { title: "Create Profile", href: "#create-profile" },
-      { title: "View Profile", href: "#toddler-care" },
+      { title: "View Profile", href: "#view-profile" },
     ],
   },
   {
-    title: "Angels Profile",
+    title: "Angel's Profile",
     items: [
-      { title: "Our Story", href: "#our-story" },
-      { title: "Our Team", href: "#our-team" },
-      { title: "Facilities", href: "#facilities" },
+      { title: "Access Profile", href: "#create-profile" },
     ],
   },
 ]
@@ -43,7 +41,7 @@ export const Navbar: React.FC = () => {
             {menuItems.map((item) => (
               <div key={item.title} className="relative group">
                 <button
-                  className="text-gray-600 hover:text-gray-800 font-medium"
+                  className="text-lg text-gray-600 hover:text-gray-800 font-medium px-2"
                   onClick={() => toggleMenu(item.title)}
                 >
                   {item.title}
