@@ -8,36 +8,18 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
-    title: "Programs",
+    title: "Registration",
     items: [
-      { title: "Infant Care", href: "#infant-care" },
-      { title: "Toddler Care", href: "#toddler-care" },
-      { title: "Preschool", href: "#preschool" },
-      { title: "After School", href: "#after-school" },
+      { title: "Create Profile", href: "#create-profile" },
+      { title: "View Profile", href: "#toddler-care" },
     ],
   },
   {
-    title: "About Us",
+    title: "Angels Profile",
     items: [
       { title: "Our Story", href: "#our-story" },
       { title: "Our Team", href: "#our-team" },
       { title: "Facilities", href: "#facilities" },
-    ],
-  },
-  {
-    title: "Parents",
-    items: [
-      { title: "Parent Resources", href: "#parent-resources" },
-      { title: "FAQs", href: "#faqs" },
-      { title: "Policies", href: "#policies" },
-    ],
-  },
-  {
-    title: "Contact",
-    items: [
-      { title: "Location", href: "#location" },
-      { title: "Get in Touch", href: "#get-in-touch" },
-      { title: "Career Opportunities", href: "#careers" },
     ],
   },
 ]
@@ -51,11 +33,11 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-md">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-5 ">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <img src="/placeholder-logo.png" alt="Daycare Logo" className="h-8 w-8 mr-2" />
-            <span className="text-xl font-bold text-gray-800">Guardian Angel</span>
+            <img src="/Meow.jpg" alt="Daycare Logo" className="left-7 h-25 w-25 mr-2" />
+            <span className="text-3xl font-bold text-blue-100">Guardian Angel</span>
           </div>
           <div className="hidden md:flex space-x-4">
             {menuItems.map((item) => (
