@@ -12,7 +12,7 @@ const menuItems: MenuItem[] = [
     title: "Registration",
     items: [
       { title: "Create Profile", href: "https://forms.office.com/r/U5g3eUvtzD" },
-      { title: "Exisitng Profile", href: "#view-profile" },
+      
     ],
   },
   {
