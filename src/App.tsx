@@ -1,27 +1,26 @@
-import { Navbar } from "./components/Navbar"
-import Schedule from "./components/Schedule"
-
+import { Navbar } from "./components/Navbar";
+import Schedule from "./components/Schedule";
+import TodaysActivity from "./components/TodaysActivity";
+import TodaysMenu from "./components/Todaysmenu";
+import WeeklyMenu from "./components/WeeklyMenu";
 
 function App() {
-
   return (
     <main>
-      <div className="App">
-        <Navbar />
+      <Navbar />
+      
+      {/* Flex container for Today's Activity and Today's Menu */}
+      <div className="flex justify-between items-start w-full px-10 mt-6">
+          <TodaysActivity />
+          <TodaysMenu />
       </div>
-      <div>
-        <div className="bg-yellow-50 rounded-lg shadow-lg px-6 py-4 w-fit mt-6 ml-10">
-          <h2 className="text-3xl font-bold text-yellow-300">Today's Activity</h2>
-        </div>
-          <p className="text-base mt-8 ml-10 text-gray-600">
-          *insert activity here*
-          </p>
-          <div>
-            <Schedule />
-          </div>
+      
+      <div className="flex justify-between items-start w-full px-10 mt-8">
+        <Schedule />
+        <WeeklyMenu />
       </div>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
