@@ -1,4 +1,6 @@
 import { Navbar } from "./components/Navbar"
+import Schedule from "./components/Schedule"
+
 
 function App() {
 
@@ -12,6 +14,9 @@ function App() {
           <p className="text-base text-left px-20 text-gray-600">
           *insert activity here*
           </p>
+          <div>
+            <Schedule />
+          </div>
       </div>
     </main>
   )
