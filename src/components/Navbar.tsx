@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <img src="/Meow.jpg" alt="Daycare Logo" className="left-7 h-25 w-25 mr-2" />
-            <span className="text-3xl font-bold text-blue-100">Guardian Angel</span>
+            <span className="text-3xl font-bold text-blue-200">Guardian Angel</span>
           </div>
           <div className="hidden md:flex space-x-4">
             {menuItems.map((item) => (
