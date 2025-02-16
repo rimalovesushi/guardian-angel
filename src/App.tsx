@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Footer from "./components/Footer";
 import App_ALogin from "./App_ALogin"; // Import App_ALogin
 import AboutUs from "./components/AboutUs"; // Import AboutUs page
+import KidsList from "./components/KidsList";
 
 function App() {
   // @ts-ignore
@@ -35,6 +36,9 @@ function App() {
 
           {/* About Us Page (Includes NavbarLogin) */}
           <Route path="/about-us" element={<AboutUs />} />
+
+          {/* Children */}
+          <Route path="/kids-list" element={<KidsList />} />
         </Routes>
       </main>
     </Router>
