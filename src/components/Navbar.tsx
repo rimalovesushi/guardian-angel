@@ -1,5 +1,6 @@
 import type React from "react"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 interface MenuItem {
     title: string
@@ -23,10 +24,15 @@ const menuItems: MenuItem[] = [
 ]
 
 export const Navbar: React.FC = () => {
-  const [openMenu, setOpenMenu] = useState<string | null>(null)
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const toggleMenu = (title: string) => {
     setOpenMenu(openMenu === title ? null : title)
+  }
+
+  const viewChildren = () => {
+    navigate("/kids-list", {replace: true});
   }
 
   return (
@@ -63,6 +69,13 @@ export const Navbar: React.FC = () => {
                 )}
               </div>
             ))}
+          {/* Kids Link */}
+          <button
+            className="text-xl text-gray-600 hover:text-yellow-300 font-medium px-2"
+            onClick={viewChildren}
+            >
+            Children
+          </button>
           </div>
           <div className="md:hidden">
             {/* Mobile menu button */}
@@ -75,6 +88,5 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
     </nav>
-  )
-}
-
+  );
+};
