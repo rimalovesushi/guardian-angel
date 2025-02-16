@@ -11,7 +11,7 @@ const menuItems: MenuItem[] = [
     title: "Registration",
     items: [
       { title: "Create Profile", href: "https://forms.office.com/r/U5g3eUvtzD" },
-      { title: "View Profile", href: "#view-profile" },
+      { title: "Exisitng Profile", href: "#view-profile" },
     ],
   },
   {
@@ -41,7 +41,7 @@ export const Navbar: React.FC = () => {
             {menuItems.map((item) => (
               <div key={item.title} className="relative group">
                 <button
-                  className="text-lg text-gray-600 hover:text-gray-800 font-medium px-2"
+                  className="text-xl text-gray-600 hover:text-yellow-300 font-medium px-2"
                   onClick={() => toggleMenu(item.title)}
                 >
                   {item.title}
